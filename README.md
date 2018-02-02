@@ -1,6 +1,6 @@
 # ExoPlayerSamle
-    1.ExoPlayer 
-    基于google ExoPlayer播放m3u8，mp4等文件，
+   
+   1. 基于google ExoPlayer播放m3u8，mp4等文件，
     
     简单自定义播放界面，新建一个Layout 
     
@@ -131,20 +131,6 @@
             }
         }
     }
-    //
+  
 
-    private DataSource.Factory buildDataSourceFactory(boolean useBandwidthMeter) {
-        return buildDataSourceFactory(useBandwidthMeter ? BANDWIDTH_METER : null);
-    }
-
-
-    DataSource.Factory buildDataSourceFactory(DefaultBandwidthMeter bandwidthMeter) {
-        return new DefaultDataSourceFactory(getApplicationContext(), bandwidthMeter,
-                buildHttpDataSourceFactory(bandwidthMeter));
-    }
-
-    HttpDataSource.Factory buildHttpDataSourceFactory(DefaultBandwidthMeter bandwidthMeter) {
-        return new DefaultHttpDataSourceFactory(Util.getUserAgent(getApplicationContext(),
-        "ExoVideoView"), bandwidthMeter);
-    }
-
+   
