@@ -1,10 +1,8 @@
 # ExoPlayerSamle
    
-   1. 基于google ExoPlayer播放m3u8，mp4等文件，
+   1. 基于google ExoPlayer播放m3u8，mp4等文件   
     
-    简单自定义播放界面，新建一个Layout 
-    
-    1.ExoPlayer 简单自定义播放界面，新建一个Layout
+    简单自定义播放界面，新建一个Layout
     
     布局文件命名为exo_playback_control_view，控件的id不能随便起，
     
@@ -14,9 +12,9 @@
     
     app:controller_layout_id="@layout/id" ，指定control的布局；
 
-    2.如果需要详细的自定义播放界面，需要重写SimpleExoPlayerView，和PlaybackControlView。
+   2.如果需要详细的自定义播放界面，需要重写SimpleExoPlayerView，和PlaybackControlView。
     
-    3.重要的类
+   3.重要的类
     
     /**
      * 监听播放状态
@@ -100,7 +98,7 @@
 
 
     }
-    4.重要的方法：
+   4.重要的方法：
     
     /**
      * 根据不同的Uri文件，生成不同的MediaSource
