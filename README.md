@@ -11,13 +11,17 @@
      * 监听播放状态
      */
     private final class ComponentListener implements ExoPlayer.EventListener {
+    
         @Override
         public void onPlayerStateChanged(boolean playWhenReady, int playbackState) {
+        
             switch (playbackState) {
                 /**
-                 * The player is able to immediately play from its current position. The player will be playing if
+                 * The player is able to immediately 
+                 /*play from its current position. The player will be playing if
                  * {@link #getPlayWhenReady()} is true, and paused otherwise.
                  */
+                 
                 case Player.STATE_READY://
                     showLoading(false);
                     play(playWhenReady);
@@ -36,7 +40,8 @@
                     showLoading(true);
                     break;
                 /**
-                 * The player is not able to immediately play from its current position. This state typically
+                 * The player is not able to 
+                 /*immediately play from its current position. This state typically
                  * occurs when more data needs to be loaded.
                  */
                 case Player.STATE_BUFFERING:
@@ -92,7 +97,8 @@
      * @return
      */
     private MediaSource buildMediaSource(Uri uri, String overrideExtension) {
-        int type = Util.inferContentType(!TextUtils.isEmpty(overrideExtension) ? "." + overrideExtension
+        int type = Util.inferContentType(!TextUtils.isEmpty(overrideExtension) ? 
+        "." + overrideExtension
                 : uri.getLastPathSegment());
         switch (type) {
             case C.TYPE_SS:
@@ -124,6 +130,7 @@
     }
 
     HttpDataSource.Factory buildHttpDataSourceFactory(DefaultBandwidthMeter bandwidthMeter) {
-        return new DefaultHttpDataSourceFactory(Util.getUserAgent(getApplicationContext(), "ExoVideoView"), bandwidthMeter);
+        return new DefaultHttpDataSourceFactory(Util.getUserAgent(getApplicationContext(),
+        "ExoVideoView"), bandwidthMeter);
     }
 
