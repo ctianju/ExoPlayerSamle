@@ -8,9 +8,11 @@
     2.如果需要详细的自定义播放界面，需要重写SimpleExoPlayerView，和PlaybackControlView。
     
     3.重要的类
+    
     /**
      * 监听播放状态
      */
+     
     private final class ComponentListener implements ExoPlayer.EventListener {
     
         @Override
@@ -90,6 +92,7 @@
 
     }
     4.重要的方法：
+    
     /**
      * 根据不同的Uri文件，生成不同的MediaSource
      *
@@ -97,6 +100,7 @@
      * @param overrideExtension
      * @return
      */
+     
     private MediaSource buildMediaSource(Uri uri, String overrideExtension) {
         int type = Util.inferContentType(!TextUtils.isEmpty(overrideExtension) ? 
         "." + overrideExtension
