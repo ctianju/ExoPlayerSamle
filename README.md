@@ -6,6 +6,7 @@
     app:controller_layout_id="@layout/id" ，指定control的布局；
 
     2.如果需要详细的自定义播放界面，需要重写SimpleExoPlayerView，和PlaybackControlView。
+    
     3.重要的类
     /**
      * 监听播放状态
